@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import Header from '../Header/Header';
 import Greeter from '../Greeter/Greeter';
+import List from '../List/List';
 import './App.css';
 
 const myName = 'Luke';
@@ -18,6 +19,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Greeter name={myName} />
+        <List items={[{title: 'Cool item'},{title: 'Groovy item'},{title: 'Red item'},{title: 'Blue item'}]}/>
       </div>
     );
   }
