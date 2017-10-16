@@ -7,6 +7,7 @@ import './App.css';
 
 const myName = 'Luke';
 const sweetListTitle = 'This is a sweet list';
+const itemList = [{title: 'Cool item'},{title: 'Groovy item'},{title: 'Red item'},{title: 'Blue item'}];
 
 class App extends Component {
   render() {
@@ -20,7 +21,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Greeter name={myName} />
-        <List listTitle={sweetListTitle} items={[{title: 'Cool item'},{title: 'Groovy item'},{title: 'Red item'},{title: 'Blue item'}]}/>
+        <List listTitle={sweetListTitle} items={itemList}/>
       </div>
     );
   }
