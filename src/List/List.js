@@ -18,9 +18,14 @@ class List extends Component {
 
     newItemChange (event) {
         console.log('onChange input event for new item', event);
+
         this.setState({
             newItem: event.target.value
         });
+
+        // this.setState is asynchronous so if you reference state below (like right here), you are doing it wrong
+        // instead, function callback would be in setState second parameter
+        // this.setState always triggers a rerender, do not call in render() because infinite loop will happen
     }
 
     render () {
