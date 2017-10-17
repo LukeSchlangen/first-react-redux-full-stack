@@ -1,4 +1,4 @@
-export default function reducer(state={}, action) {
+export default function reducer(state = {}, action) {
     // you can define a default for state (here, an empty object)
     // state is the state starting at the root that we have defined in reducers
     // this slice of state is defined in reducers, here, it's the list slice
@@ -9,13 +9,19 @@ export default function reducer(state={}, action) {
     // state is immutable by convention (not by enforcement)
     switch (action.type) {
         case 'ADD_NEW_ITEM':
-
-            return {...state, ...action.payload}; // this does a shallow copy
+            return { ...state, ...action.payload }; // this does a shallow copy
             break;
-    
+        case 'LIST_FETCH_SUCCEEDED':
+            return { ...state, ...action.payload }; // this does a shallow copy
+            break;
+
         default:
             console.error('Unknown action.type in listReducer:', action.type);
-            return {...state};
+            return { ...state };
             break;
     }
-} 
+}
+
+// Need to add action to handle error, skipped for now
+// type: 'LIST_FETCH_FAILED',
+// payload: error

@@ -4,3 +4,9 @@ export function addNewItem (item) {
         payload: item
     }
 }
+
+export function fetchList () {
+    return {
+        type: 'LIST_REQUESTED'
+    }
+}

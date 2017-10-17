@@ -10,6 +10,7 @@ class List extends Component {
     constructor (props) {
         super(props);
         // store.dispatch(listActions.addNewItem({title: 'Miles says Hello'}));
+        this.props.actions.fetchList();
         this.state = {
             newItem: ''
         }
