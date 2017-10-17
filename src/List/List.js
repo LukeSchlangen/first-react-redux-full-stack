@@ -40,7 +40,7 @@ class List extends Component {
         <input onChange={this.newItemChange}/>
         <div>{this.props.list.title}</div>
         <ul>
-            {this.props.items.map(item => (
+            {this.props.list.items.map(item => (
             <li key={item.title}> {/* key must be unique, used for internal react tracking */}
             {item.title}
             </li>)

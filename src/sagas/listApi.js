@@ -5,7 +5,7 @@ import axios from 'axios';
 // worker
 function* fetchList() {
     try {
-        const list = yield call(axios.get, 'localhost:5000/list'); // this will be the starting list
+        const list = yield call(axios.get, 'http://demo1402877.mockable.io/list'); // this will be the starting list
         yield put({
             type: 'LIST_FETCH_SUCCEEDED',
             payload: list
