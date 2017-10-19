@@ -1,3 +1,5 @@
+// listReducer.js
+
 export default function reducer(state = {items: []}, action) {
     // you can define a default for state (here, an empty object)
     // state is the state starting at the root that we have defined in reducers

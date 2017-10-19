@@ -1,3 +1,5 @@
+// Greeter.js
+
 import React from 'react';
 
 export default function Greeter ({name}) { // {name} is es6 comes from props.name

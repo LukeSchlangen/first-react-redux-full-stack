@@ -1,3 +1,5 @@
+// store.js
+
 import {applyMiddleware, createStore} from 'redux';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga'
