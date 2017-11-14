@@ -1,6 +1,6 @@
 // reducers.js
 
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import list from './listReducer';
 
 export default combineReducers({

@@ -1,6 +1,6 @@
 // listApi.js
 
-import {call, put, takeEvery} from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
 
@@ -12,7 +12,7 @@ function* fetchList() {
             type: 'LIST_FETCH_SUCCEEDED',
             payload: list
         })
-    } catch(error) {
+    } catch (error) {
         // Need to add action to handle error, skipped for now
         yield put({
             type: 'LIST_FETCH_FAILED',
@@ -24,7 +24,7 @@ function* fetchList() {
 
 
 // master/watcher
-export default function* listApiSaga () {
+export default function* listApiSaga() {
     // need to add action if want to do something like loading bar (between requested and http response)
     yield takeEvery('LIST_REQUESTED', fetchList);
 
